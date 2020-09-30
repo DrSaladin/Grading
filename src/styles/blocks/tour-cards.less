@@ -1,0 +1,70 @@
+.tour-cards {
+    position: relative;
+    min-height: 1050px;
+    z-index: 1;
+    transition: .5s;
+
+    @media @bw1270 {
+        min-height: 850px;
+        padding-bottom: 80px;
+    }
+
+    &__wrapper {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        background-image: url(../../assets/images/img_backgr-map.png);
+        background-repeat: no-repeat;
+        z-index: -1;
+        min-height: 100%;
+        top: 10%;
+        left: 11%;
+    }
+
+    @media @bw1270 {
+        &::after {
+            content: "";
+            display: none;
+        }
+    }
+
+    &__tab-switchers {
+        display: flex;
+        width: 900px;
+        margin: 0 0 80px 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 900px;
+            background-color: rgba(44, 46, 63, 0.3);
+            bottom: -15px;
+            left: 0;
+        }
+    }
+
+    &__tab-switcher { 
+
+        button {
+            margin-right: 99px;
+            padding: 0;
+            font-family: @montserrat-font;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: -0.4px;
+            color: rgba(44, 46, 63, 0.3);
+            background-color: transparent;
+            border: transparent;
+
+        }
+    }
+}

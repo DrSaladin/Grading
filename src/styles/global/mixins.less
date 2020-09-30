@@ -1,0 +1,74 @@
+.clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  //max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @media @bw1270 {
+    padding: 0 50px;
+  }
+  
+  @media @bw1024 {
+    padding: 0 21px;
+  }
+
+  @media @bw768 {
+    padding: 0 16px;
+  }
+}
+
+
+
+.show-block {
+  display: block;
+}
+
+.show-flex {
+  display: flex;
+}
+
+.hide-block {
+  display: none;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.is-ios * {
+  cursor: pointer;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+}
+
+.reset-link {
+  text-decoration: none;
+  color: black;
+}
+
+.reset-list {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  overflow: hidden;
+}

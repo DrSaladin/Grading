@@ -1,0 +1,278 @@
+.tour-card {
+    display: none;
+
+    &--active {
+        max-width: 1270px;
+        display: flex;
+        justify-content: space-between;  
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        background-size: 430px 596px;
+        background-repeat: no-repeat;
+        top: 95px;
+        left: 44%;
+        width: 430px;
+        height: 596px;
+    }
+
+
+    &__info {
+        width: 370px;
+        position: relative;
+
+
+        &-title {
+            font-family: @montserrat-font;
+            font-size: 55px;
+            line-height: 90px;
+            letter-spacing: -1.25px;
+            color: @color-dblue;
+            margin: 0 0 53px 0;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 175px;
+                height: 3px;
+                background-color: @color-tomato;
+                bottom: -20px;
+                left: 0;
+            }
+        }
+
+        &-text {
+            font-family: @montserrat-font;
+            font-size: 16px;
+            line-height: 28px;
+            margin: 0 0 50px 0;
+            letter-spacing: -0.5px;
+            color: rgba(44, 46, 63, 0.7);
+        }
+
+
+
+        &-link {
+            display: block;
+            width: 250px;
+            min-height: 75px;
+            background-color: @color-tomato;
+            transition: .5s;
+            font-family: @montserrat-font;
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: center;
+            text-decoration: none;
+            color: @color-white;
+
+
+            &:hover {
+                background-color: @color-orange;
+            }
+        }
+    }
+
+
+    @media @bw1270 {
+        &__info {
+            width: 960px;
+            margin: 0 auto;
+
+            &-title {
+                font-size: 30px;
+                line-height: 45px;
+                margin-bottom: 20px;
+                text-align: center;
+
+                &::after {
+                    content: "";
+                    display: none;
+                }
+            }
+
+            &-text {
+                text-align: center;
+            }
+
+            &-link {
+                width: 288px;
+                margin: 0 auto 100px auto;
+            }
+        }
+    }
+
+    @media @bw1060 {
+        &__info {
+            width: auto;
+        }
+    }
+
+
+    @media @bw768 {
+        &__info {
+
+            &-title {
+                font-size: 24px;
+                line-height: 36px;
+            }
+
+            &-text {
+                margin: 0 0 20px 0;
+                text-align: center;
+            }
+
+            &-link {
+                min-height: 50px;
+                font-size: 10px;
+                line-height: 12px;
+                margin: 0 auto 120px auto;
+            }
+        }
+    }
+
+    &__review {
+        width: 382px;
+        max-height: 367px;
+        padding: 30px;
+        box-sizing: border-box;
+        margin-top: 110px; // !!!
+        background-color: #ffffff;
+        position: relative;
+        z-index: 2;
+
+        &-title {
+            font-family: @montserrat-font;
+            font-size: 30px;
+            line-height: 37px;
+            letter-spacing: -0.7px;
+            color: @color-dblue;
+            margin: 0 0 30px 0;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 70px;
+                height: 1.5px;
+                background-color: @color-tomato;
+                bottom: -10px;
+                left: 0;
+            }
+        }
+
+        &-img {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+        }
+
+        &-text {
+            font-family: @montserrat-font;
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: -0.4px;
+            color: rgba(44, 46, 63, 0.7);
+            margin: 0 0 37px 0;
+        }
+
+        &-name {
+            font-family: @montserrat-font;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.5px;
+            margin-left: 51px;
+            display: block;
+            color: @color-dblue;
+        }
+    }
+
+    @media @bw1270 {
+        &__review {
+            margin: 0 auto;
+        }
+    }
+
+    @media @bw768 {
+        &__review {
+            width: 268px;
+            min-height: 431px;
+            margin: 0 auto;
+            padding: 30px 20px;
+
+            &__review-title {
+                font-size: 20px;
+                line-height: 24px;
+                margin-bottom: 30px;
+            }
+
+            &-text { 
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &--greece::after {
+        background-image: url(../../assets/images/img_dest_card_greec.jpg);
+    }
+
+    &--albania::after {
+        background-image: url(../../assets/images/img_alban.jpg);
+    }
+
+    @media @bw1270 {
+        &::after {
+            top: 430px;
+            left: 0;
+            width: 100%;
+            height: 415px;
+            background-size: 100%;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        &--greece::after {
+            background-image: url(../../assets/images/img_page-banner.jpg);
+        }
+
+        &--albania::after {
+            background-image: url(../../assets/images/img_review_albania_tablet.jpg);
+        }
+    }
+
+    @media @bw965 {
+        &--greece::after,
+        &--albania::after {
+            top: 460px;
+        }
+    }
+
+    @media @bw800 {
+        &--greece::after,
+        &--albania::after {
+            top: 490px;
+        }
+    }
+
+    @media @bw655 {
+        &--greece::after,
+        &--albania::after {
+            top: 520px;
+        }
+    }
+}
+
+@media @bw1270 {
+    .tour-card--active {
+        display: block;
+    }
+}
+

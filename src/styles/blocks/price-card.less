@@ -1,0 +1,178 @@
+.price-card {
+    width: 370px;
+    min-height: 672px;
+    border: 2px solid rgba(44, 46, 63, 0.3);
+    border-radius: 6px;
+    font-family: @montserrat-font;
+    padding: 40px 30px 30px;
+    box-sizing: border-box;
+    transition: .5s;
+    background-color: @color-white;
+    position: relative;
+
+    &:hover {
+        border: 2px solid @color-tomato;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: - 1.3px;
+        color: rgba(20, 21, 23, 0.7);
+        margin: 0 0 35px 0;
+        transition: .5s;
+
+        &-price {
+            font-size: 25px;
+            line-height: 34px;
+        }
+    }
+
+    @media @bw1270 {
+        &__title {
+            font-size: 24px;
+            line-height: 34px;
+            letter-spacing: - 1.3px;
+            color: rgba(20, 21, 23, 0.7);
+            margin-bottom: 10px;
+            text-align: center;
+
+            &-price {
+                display: block;
+                margin-bottom: 11px;
+                text-align: center;
+            }
+        }
+    }
+    
+
+    &__lead {
+        font-size: 16px;
+        line-height: 24px;
+        color: @color-dblue;
+        margin: 0 0 60px 0;
+        position: relative;
+        transition: .5s;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: rgba(44, 46, 63, 0.3);
+            width: 305px;
+            height: 2px;
+            bottom: -30px;
+            left: 0;
+            transition: .5s;
+        }
+    }
+
+    @media @bw1270 {
+        &__lead {
+            text-align: center;
+            margin-bottom: 30px;
+
+            &::after {
+                width: 245px;
+                bottom: -10px;
+            }
+        }
+    }
+
+    &__advantages {
+        padding: 0 0 0 30px;
+        list-style: none;
+        
+
+        &-item {
+            margin: 0 0 15px 0;
+            font-size: 16px;
+            line-height: 32px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 6px;
+                width: 12px;
+                border: 2px solid @color-tomato;
+                border-top: transparent;
+                border-right: transparent;
+                transform: rotate(-45deg);
+                left: -28px;
+                top: 9px;
+            }
+        }
+    }
+
+    @media @bw1270 {
+        &__advantages-item {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__buy-button {
+        width: 305px;
+        min-height: 75px;
+        display: block;
+        background-color: @color-tomato;
+        padding: 30px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: @color-white;
+        text-decoration: none;
+        margin-top: auto;
+        transition: .5s;
+        position: absolute;
+        bottom: 30px;
+
+        &:hover {
+            background-color: @color-orange;
+        }
+    }
+
+    @media @bw1270 {
+        &__buy-button {
+            width: 288px;
+            min-height: 50px;
+            position: absolute;
+            bottom: -2px;
+            left: -2px;
+            padding: 19px 40px;
+            font-weight: 500;
+        }
+    }
+}
+
+.price-card:hover .price-card__lead::after {
+    background-color: @color-tomato;
+}
+
+.price-card:hover .price-card__title {
+    color: @color-tomato;
+}
+
+.price-card:hover .price-card__advantages-item::before {
+    border: 2px solid @color-dblue;
+    border-top: transparent;
+    border-right: transparent;
+}
+
+@media @bw1270 {
+    .price-card {
+        width: 288px;
+        min-height: 629px;
+        padding: 30px 20px 0;
+    }
+}
+
+@media @bw768 {
+    .price-card {
+        margin: 0 auto;
+    }
+}

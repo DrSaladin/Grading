@@ -1,0 +1,38 @@
+.page-header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    font-family: @montserrat-font;
+    min-height: 99px;
+    margin: 0 auto;
+    max-width: 1270px;
+    width: 100%;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__contacts {
+        display: flex;
+        width: 20%;
+        justify-content: end;
+
+        a {
+            font-family: @montserrat-font;
+            font-size: 18px;
+            line-height: 32px;
+            color: @color-tomato;
+
+            svg {
+                color: @color-tomato;
+            }
+        }
+    }
+
+    @media @bw1270 {
+        &__contacts {
+            width: 25%;
+        }
+    }
+}
